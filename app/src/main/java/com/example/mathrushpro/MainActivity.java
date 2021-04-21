@@ -12,8 +12,19 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.media.MediaPlayer;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText et_nombre;
+    private ImageView iv_personaje;
+    private TextView tv_bestScore;
+    private MediaPlayer mp;
+
+    int num_aleatorio = (int) (Math.random()*10);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,35 +33,27 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-    }
+        et_nombre = (EditText)findViewById(R.id.txt_nombre);
+        iv_personaje = (ImageView)findViewById(R.id.imageView_Personaje);
+        tv_bestScore = (TextView)findViewById(R.id.textView_BestScore);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        int id;
+        if(num_aleatorio == 0 || num_aleatorio == 10){
+            id = getResources().getIdentifier("kraken", "drawable", getPackageName());
+            iv_personaje.setImageResource(id);
+        } else if(num_aleatorio == 1 || num_aleatorio == 9){
+            id = getResources().getIdentifier("centaur", "drawable", getPackageName());
+            iv_personaje.setImageResource(id);
+        } else if(num_aleatorio == 2 || num_aleatorio == 8){
+            id = getResources().getIdentifier("dinosaur", "drawable", getPackageName());
+            iv_personaje.setImageResource(id);
+        } else if(num_aleatorio == 3 || num_aleatorio == 7){
+            id = getResources().getIdentifier("dragon", "drawable", getPackageName());
+            iv_personaje.setImageResource(id);
+        } else if(num_aleatorio == 4 || num_aleatorio == 5 || num_aleatorio == 6){
+            id = getResources().getIdentifier("robot", "drawable", getPackageName());
+            iv_personaje.setImageResource(id);
         }
-
-        return super.onOptionsItemSelected(item);
     }
+
 }

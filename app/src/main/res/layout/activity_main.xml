@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/azulClaro"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -20,14 +21,50 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <ImageView
+        android:id="@+id/imageView_Personaje"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:translationX="30dp"
+        android:translationY="150dp"
+        app:srcCompat="@drawable/centaur" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/txt_nombre"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:ems="10"
+        android:fontFamily="@font/bungee"
+        android:hint="@string/et_nombre"
+        android:inputType="textPersonName"
+        android:maxLength="15"
+        android:textColor="@color/blanco"
+        android:textColorHint="@color/blanco"
+        android:textSize="24sp"
+        android:translationX="50dp"
+        android:translationY="530dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:text="@string/boton"
+        android:textSize="24sp"
+        android:translationX="75dp"
+        android:translationY="650dp"
+        app:cornerRadius="50dp" />
+
+    <TextView
+        android:id="@+id/textView_BestScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rosa"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/blanco"
+        android:textSize="18sp"
+        android:translationY="55dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
