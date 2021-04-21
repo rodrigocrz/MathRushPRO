@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
             id = getResources().getIdentifier("robot", "drawable", getPackageName());
             iv_personaje.setImageResource(id);
         }
+
+        mp = MediaPlayer.create(this, R.raw.instrumental);
+        mp.start();
+        mp.setLooping(true);
     }
 
 }
