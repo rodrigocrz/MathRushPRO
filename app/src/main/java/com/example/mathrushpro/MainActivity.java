@@ -1,5 +1,6 @@
 package com.example.mathrushpro;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -16,6 +17,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.media.MediaPlayer;
+import android.widget.Toast;
+import android.view.inputmethod.InputMethodManager;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,4 +64,29 @@ public class MainActivity extends AppCompatActivity {
         mp.setLooping(true);
     }
 
+    public void Jugar(View view){
+        String nombre = et_nombre.getText().toString();
+
+        if(!nombre.equals("")){
+            mp.stop();
+            mp.release();
+
+            Intent intent = new Intent(this, MainActivity2_Nivel1.class);
+
+            intent.putExtra("jugador", nombre);
+            startActivity(intent);
+            finish();
+        } else {
+            Toast.makeText(this, "Primero debes escribir tu nombre", Toast.LENGTH_SHORT).show();
+
+            et_nombre.requestFocus();
+            InputMethodManager imm = (InputMethodManager)getSystemService(this.INPUT_METHOD_SERVICE);
+            imm.showSoftInput(et_nombre, InputMethodManager.SHOW_IMPLICIT);
+        }
+    }
+
+    @Override
+    public void onBackPressed(){
+
+    }
 }
