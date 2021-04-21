@@ -12,6 +12,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/bungee"
+        android:onClick="Comparar"
         android:text="@string/boton_sumar"
         android:textSize="24sp"
         android:translationX="75dp"
@@ -73,7 +74,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:contentDescription="@string/app_name"
-        android:translationX="250dp"
+        android:translationX="240dp"
         android:translationY="300dp"
         app:srcCompat="@drawable/cero" />
 
@@ -82,7 +83,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:contentDescription="@string/app_name"
-        android:translationX="165dp"
+        android:translationX="162dp"
         android:translationY="350dp"
         app:srcCompat="@drawable/suma" />
 
