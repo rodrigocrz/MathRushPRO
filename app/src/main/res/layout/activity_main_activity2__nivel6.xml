@@ -1,9 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/azulClaro"
     tools:context=".MainActivity2_Nivel6">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:onClick="Comparar"
+        android:text="@string/boton_sumar"
+        android:textSize="24sp"
+        android:translationX="75dp"
+        android:translationY="610dp"
+        app:cornerRadius="50dp" />
+
+    <TextView
+        android:id="@+id/textView_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:text="@string/jugador_nombre"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        android:translationX="20dp"
+        android:translationY="50dp" />
+
+    <TextView
+        android:id="@+id/textView_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:text="@string/total_score"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        android:translationX="20dp"
+        android:translationY="120dp" />
+
+    <TextView
+        android:id="@+id/textView_vidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:text="@string/et_vidas"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        android:translationX="20dp"
+        android:translationY="190dp" />
+
+    <ImageView
+        android:id="@+id/imageView_vidas"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:translationX="110dp"
+        android:translationY="190dp"
+        app:srcCompat="@drawable/tresvidas" />
+
+    <ImageView
+        android:id="@+id/imageView_NumUno"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/app_name"
+        android:translationX="10dp"
+        android:translationY="300dp"
+        app:srcCompat="@drawable/cero" />
+
+    <ImageView
+        android:id="@+id/imageView_NumDos"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/app_name"
+        android:translationX="240dp"
+        android:translationY="300dp"
+        app:srcCompat="@drawable/cero" />
+
+    <ImageView
+        android:id="@+id/imageView_signo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/app_name"
+        android:translationX="162dp"
+        android:translationY="350dp"
+        app:srcCompat="@drawable/multiplicacion" />
+
+    <EditText
+        android:id="@+id/editText_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:hint="@string/et_respuesta"
+        android:inputType="number"
+        android:textColor="@color/blanco"
+        android:textColorHint="@color/blanco"
+        android:textSize="24sp"
+        android:translationX="60dp"
+        android:translationY="490dp" />
+</RelativeLayout>
