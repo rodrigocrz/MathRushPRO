@@ -98,15 +98,15 @@ public class MainActivity2_Nivel2 extends AppCompatActivity {
                         iv_vidas.setImageResource(R.drawable.tresvidas);
                         break;
                     case 2:
-                        Toast.makeText(this, "Te quedan 2 manzanas", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Te quedan 2 vidas", Toast.LENGTH_LONG).show();
                         iv_vidas.setImageResource(R.drawable.dosvidas);
                         break;
                     case 1:
-                        Toast.makeText(this, "Te queda 1 manzana", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Te queda 1 vida", Toast.LENGTH_LONG).show();
                         iv_vidas.setImageResource(R.drawable.unavida);
                         break;
                     case 0:
-                        Toast.makeText(this, "Has perdido todas tus manzanas", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, "Has perdido todas tus vidas", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(this, MainActivity.class);
                         startActivity(intent);
                         finish();
